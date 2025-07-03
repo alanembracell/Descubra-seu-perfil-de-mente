@@ -1,21 +1,27 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qual tipo de mente você tem?</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueie o Cofre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <img src="assets/logo.png" class="logo" alt="Mobielo Games">
-    <h1>Qual tipo de mente você tem?</h1>
-    <div id="quiz"></div>
-    <div id="result"></div>
-    <button id="next" onclick="next()">Próxima</button>
-    <button id="restart" onclick="restart()">Refazer</button>
-  </div>
-  <script src="script.js"></script>
+    <div id="game-container">
+        <img src="assets/images/cofre.png" alt="Cofre" id="cofre-img">
+        <h1>🔐 Desbloqueie o Cofre</h1>
+        <div id="level-container">
+            <p id="question"></p>
+            <div id="answers"></div>
+        </div>
+        <p id="result"></p>
+        <button id="next-btn" onclick="nextLevel()">Próximo</button>
+        <br><br>
+        <button id="share-btn" onclick="compartilhar()">Compartilhar no WhatsApp</button>
+    </div>
+    <audio id="sound-correct" src="assets/sounds/correct.mp3"></audio>
+    <audio id="sound-wrong" src="assets/sounds/wrong.mp3"></audio>
+    <script src="script.js"></script>
 </body>
 </html>
